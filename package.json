@@ -21,7 +21,6 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "my-component-lib": "my-component-lib-0.0.0.tgz",
     "vue": "^3.2.20"
   },
   "devDependencies": {
