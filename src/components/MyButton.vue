@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
 
-interface Props {
+const props = withDefaults(defineProps<{
   primary?: boolean;
-}
 
-const props = withDefaults(defineProps<Props>(), {
+}>(), {
   primary: false,
 });
 

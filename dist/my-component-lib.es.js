@@ -27,6 +27,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-var MyButton = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-00487d54"]]);
+var MyButton = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-ca016406"]]);
 
 export { MyButton };
