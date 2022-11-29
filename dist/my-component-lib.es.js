@@ -1,6 +1,33 @@
-import { ref, getCurrentInstance, computed, watch, onMounted, h, shallowReactive, onBeforeUnmount, nextTick, onBeforeUpdate, onUpdated, inject, reactive, markRaw, defineComponent, withDirectives, Transition, toRaw, provide, onDeactivated, onActivated, onUnmounted, onBeforeMount, KeepAlive, createApp, Teleport, vShow, isRef, unref, resolveDirective, openBlock, createElementBlock, createVNode, withCtx, Fragment, renderList, createBlock, withModifiers, createElementVNode, toDisplayString, withKeys, createTextVNode } from 'vue';
+import { defineComponent, reactive, openBlock, createElementBlock, normalizeClass, unref, renderSlot, ref, getCurrentInstance, computed, watch, onMounted, h, shallowReactive, onBeforeUnmount, nextTick, onBeforeUpdate, onUpdated, inject, markRaw, withDirectives, Transition, toRaw, provide, onDeactivated, onActivated, onUnmounted, onBeforeMount, KeepAlive, createApp, Teleport, vShow, isRef, resolveDirective, createVNode, withCtx, Fragment, renderList, createBlock, withModifiers, createElementVNode, toDisplayString, withKeys, createTextVNode } from 'vue';
 
 var MyButton_vue_vue_type_style_index_0_scoped_true_lang = '';
+
+var _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+  __name: "MyButton",
+  props: {
+    primary: { type: Boolean, default: false }
+  },
+  setup(__props) {
+    const props = __props;
+    const { primary } = reactive(props);
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("button", {
+        class: normalizeClass(["btn", { primary: unref(primary) }])
+      }, [
+        renderSlot(_ctx.$slots, "default", {}, void 0, true)
+      ], 2);
+    };
+  }
+});
+var MyButton = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-ca016406"]]);
 
 /*!
  * Quasar Framework v2.10.2
@@ -13,7 +40,7 @@ var VMDataTable_vue_vue_type_style_index_0_lang = '';
 
 const _hoisted_1 = { class: "q-mt-md" };
 const _hoisted_2 = { class: "text-weight-bold text-subtitle2 text-grey-6 q-pl-md" };
-defineComponent({
+const _sfc_main = defineComponent({
   __name: "VMDataTable",
   props: {
     menuItems: null,
@@ -242,3 +269,10 @@ defineComponent({
     };
   }
 });
+
+var index = {
+  MyButton,
+  VMDataTable: _sfc_main
+};
+
+export { index as default };
